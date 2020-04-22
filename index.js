@@ -23,7 +23,7 @@ function deepestChild() {
     // we haven't looked at yet
     let current = document.querySelectorAll('div#grand-node');
     let next = []
-   
+
     // hey, a `while` loop! this loop will only
     // trigger if `current` is truthy — so when
     // we exhaust `next` and, below, attempt to
@@ -42,7 +42,7 @@ function deepestChild() {
       if (criteriaFn(current)) {
         return current
       }
-   
+
       // if `current` is an array, we want to push all of
       // its elements (which might be arrays) onto `next`
       if (Array.isArray(current)) {
@@ -50,7 +50,7 @@ function deepestChild() {
           next.push(current[i])
         }
       }
-   
+
       // after pushing any children (if there
       // are any) of `current` onto `next`, we want to take
       // the first element of `next` and make it the
@@ -58,7 +58,7 @@ function deepestChild() {
       // loop
       current = next.shift()
     }
-   
+
     // if we haven't
     return null
 }
