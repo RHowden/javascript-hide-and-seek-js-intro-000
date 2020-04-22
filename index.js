@@ -23,5 +23,5 @@ function deepestChild() {
 
     }
 
-    return result.innerHTML;
+    return result;
 }
